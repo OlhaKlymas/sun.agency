@@ -1,0 +1,190 @@
+@font-face {
+    font-family: "playfair";
+    src: url("./fonts/playfair/Playfairdisplaymedium.woff") format("woff"),
+    url("./fonts/playfair/Playfairdisplaymedium.woff") format("woff");
+}
+@font-face {
+    font-family: "raleway";
+    src: url("./fonts/raleway/ralewayregular.woff") format("woff"),
+    url("./fonts/raleway/ralewayregular.woff") format("woff");
+}
+
+body, h2, p{
+    margin: 0;
+    font-family: 'raleway';
+}
+.order{
+    padding: 90px;
+    background: #E5E5E5;
+    color: #2D2D41;
+}
+.order__wrap{
+    padding: 40px 54px;
+    background: #fff;
+    letter-spacing: -0.33px;
+}
+h2{
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-family: 'playfair';
+    font-weight: 400;
+}
+.btn__wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 13px 16px;
+    width: 50%;
+}
+.btn{
+    display: flex;
+    width: calc(50% - 16px/2);
+}
+.btn input, .order__form, .content{
+    display: none;
+}
+.btn input ~ label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 62px;
+    background: #E5E5E5;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.btn input:checked ~ label{
+    background: #87B9E7;
+    color: #fff;
+    text-decoration: underline;
+}
+.order__payment p,
+.order__delivery p,
+.order__form p{
+    margin: 56px 0 20px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.order__form p {
+    margin: 40px 0 32px;
+}
+.order__form.active,
+.content.active{
+    display: block;
+}
+.content{
+    width: 50%;
+}
+.inputs_wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 17px 15px;
+}
+.input__block:not(:first-child){
+    width: calc(50% - 15px/2);
+    display: flex;
+    flex-direction: column;
+}
+.input__block:first-child{
+    width: 100%;
+}
+.input__block:first-child input{
+    width: calc(50% - 15px/2 - 42px);
+}
+.input__block, .textarea__block{
+    position: relative;
+}
+.input__block label,
+.textarea__block label{
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    padding: 0 5px;
+    background: #fff;
+    color: #5E6575;
+    font-size: 14px;
+    transition: .5s;
+}
+.input__block.active label,
+.textarea__block.active label{
+    top: -5px;
+    left: 24px;
+    font-size: 12px;
+}
+.textarea__block{
+    width: 100%;
+    margin: 17px 0 32px;
+}
+.input__block input,
+.textarea__block textarea{
+    width: calc(100% - 42px);
+    padding: 10px 20px;
+    border: 1px solid #EDEFF4;
+    color: #2D2D41;
+}
+.input__block.validate input,
+.textarea__block.validate textarea{
+    border-color: #C8C8C8;
+}
+.input__block.error_wrap input,
+.textarea__block.error_wrap textarea{
+    border-color: #DD1111;
+}
+.input__block input:focus-visible,
+.textarea__block textarea:focus-visible{
+    border-color: #87B9E7;
+    outline: unset;
+}
+.textarea__block textarea{
+    height: 95px;
+}
+input[type=submit]{
+    width: 55%;
+    height: 45px;
+    background: #517DA3;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+}
+span.error{
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #DD1111;
+}
+
+@media screen and (max-width: 1200px) {
+    .btn__wrap, .content{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .btn__wrap, .inputs_wrap{
+        flex-direction: column;
+    }
+    .btn, .inputs_wrap .input__block{
+        width: 100%;
+    }
+    .input__block:first-child input {
+        width: calc(100% - 42px);
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .order {
+        padding: 20px;
+    }
+    .order__wrap {
+        padding: 20px 24px;
+    }
+    input[type=submit] {
+        width: auto;
+    }
+}

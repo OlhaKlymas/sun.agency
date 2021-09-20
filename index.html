@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test to Sun.agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="order">
+    <div class="order__wrap">
+        <h2>Оформление заказа</h2>
+        <div class="order__payment">
+            <p>Выберете тип оплаты:</p>
+            <div class="btn__wrap">
+                <div class="btn">
+                    <input type="radio" id="cash" name="payment" value="cash">
+                    <label for="cash">Наличный расчёт</label>
+                </div>
+                <div class="btn">
+                    <input type="radio" id="non_cash" name="payment" value="non_cash">
+                    <label for="non_cash">Оплата на карту</label>
+                </div>
+            </div>
+        </div>
+        <div class="order__delivery">
+            <p>Выберете тип доставки:</p>
+            <div class="btn__wrap">
+                <div class="btn">
+                    <input type="radio" id="yourself" name="delivery" value="yourself">
+                    <label for="yourself">Самовывоз</label>
+                </div>
+                <div class="btn">
+                    <input type="radio" id="courier" name="delivery" value="courier">
+                    <label for="courier">Курьером по Киеву</label>
+                </div>
+                <div class="btn">
+                    <input type="radio" id="yourself_np" name="delivery" value="yourself_np">
+                    <label for="yourself_np">В отделение Новой Почты</label>
+                </div>
+                <div class="btn">
+                    <input type="radio" id="courier_np" name="delivery" value="courier_np">
+                    <label for="courier_np">Курьером Новой Почты</label>
+                </div>
+            </div>
+            <div class="order__form">
+                <p>Заполните данные:</p>
+                <div class="content yourself">
+                    <form>
+                        <div class="inputs_wrap">
+                            <div class="input__block name">
+                                <label for="yourself_name">Имя</label>
+                                <input type="text" id="yourself_name" required>
+                                <span class="error"></span>
+                            </div>
+                            <div class="input__block tel">
+                                <label for="yourself_tel">Номер телефона</label>
+                                <input type="tel" id="yourself_tel" required
+                                       pattern="^\+?[3]?[8][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$">
+                                <span class="error"></span>
+                            </div>
+                            <div class="input__block email">
+                                <label for="yourself_email">E-mail</label>
+                                <input type="email" id="yourself_email" required>
+                                <span class="error"></span>
+                            </div>
+                        </div>
+                        <div class="textarea__block">
+                            <label for="yourself_comment">Комментарий</label>
+                            <textarea required id="yourself_comment" required></textarea>
+                            <span class="error"></span>
+                        </div>
+                        <input type="submit" value="Оформить заказ">
+                    </form>
+                </div>
+                <div class="content yourself_np">
+                    <form>
+                        <div class="inputs_wrap">
+                            <div class="input__block name">
+                                <label for="yourself_np_name">Имя</label>
+                                <input type="text" id="yourself_np_name" required>
+                                <span class="error"></span>
+                            </div>
+                            <div class="input__block tel">
+                                <label for="yourself_np_tel">Номер телефона</label>
+                                <input type="tel" id="yourself_np_tel" required>
+                                <span class="error"></span>
+                            </div>
+                            <div class="input__block email">
+                                <label for="yourself_np_email">E-mail</label>
+                                <input type="email" id="yourself_np_email" required>
+                                <span class="error"></span>
+                            </div>
+                            <div class="input__block city">
+                                <label for="yourself_np_city">Город</label>
+                                <input type="text" id="yourself_np_city" required>
+                                <span class="error"></span>
+                            </div>
+                            <div class="input__block branch_number">
+                                <label for="yourself_np_branch_number">Номер отделения Новой почты</label>
+                                <input type="text" id="yourself_np_branch_number" required>
+                                <span class="error"></span>
+                            </div>
+                        </div>
+                        <div class="textarea__block">
+                            <label for="yourself_np_comment">Комментарий</label>
+                            <textarea required id="yourself_np_comment" required></textarea>
+                            <span class="error"></span>
+                        </div>
+                        <input type="submit" value="Оформить заказ">
+                    </form>
+                </div>
+                <div class="content courier_np">
+                    <form>
+                        <div class="inputs_wrap">
+                            <div class="input__block name">
+                                <label for="courier_np_name">Имя</label>
+                                <input type="text" id="courier_np_name" required>
+                                <span class="error"></span>
+                            </div>
+                            <div class="input__block tel">
+                                <label for="courier_np_tel">Номер телефона</label>
+                                <input type="tel" id="courier_np_tel" required>
+                                <span class="error"></span>
+                            </div>
+                            <div class="input__block email">
+                                <label for="courier_np_email">E-mail</label>
+                                <input type="email" id="courier_np_email" required>
+                                <span class="error"></span>
+                            </div>
+                            <div class="input__block city">
+                                <label for="courier_np_city">Город</label>
+                                <input type="text" id="courier_np_city" required>
+                                <span class="error"></span>
+                            </div>
+                            <div class="input__block address">
+                                <label for="courier_np_address">Улица, дом, квартира</label>
+                                <input type="text" id="courier_np_address" required>
+                                <span class="error"></span>
+                            </div>
+                        </div>
+                        <div class="textarea__block">
+                            <label for="comment">Комментарий</label>
+                            <textarea required id="comment" required></textarea>
+                            <span class="error"></span>
+                        </div>
+                        <input type="submit" value="Оформить заказ">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="index.js"></script>
+</body>
+</html>
