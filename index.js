@@ -73,7 +73,7 @@ function check(field){
     let fieldError = field.querySelector('.error')
     let fieldBlock = field.querySelector('input') || field.querySelector('textarea')
     let label = field.querySelector('label')
-    if (fieldBlock.validity.valid) {
+    if (fieldBlock.validity.valid && fieldBlock.value.trim() !== '') {
         fieldError.textContent = '';
         field.classList.add('validate')
         field.classList.remove('error_wrap')
